@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>賴家每日運勢 2026-08-03 週一 完整報告</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+          background: #f0f2f5; color: #2c3e50; line-height: 1.6; }
+  .hero { background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);
+           padding: 32px 20px; text-align: center; color: #fff; }
+  .hero-emoji { font-size: 48px; }
+  .hero-title { font-size: 24px; font-weight: 700; margin-top: 10px; }
+  .hero-date { font-size: 14px; opacity: 0.7; margin-top: 4px; }
+  .ganzhi-badge { display: inline-block; background: rgba(255,255,255,0.12);
+                   border-radius: 20px; padding: 8px 20px; margin-top: 14px;
+                   font-size: 14px; color: #e0c080; }
+  nav { background: #fff; display: flex; gap: 0; overflow-x: auto;
+         box-shadow: 0 2px 4px rgba(0,0,0,0.06); }
+  nav a { flex: 1; min-width: 60px; padding: 12px 8px; text-align: center;
+            font-size: 12px; text-decoration: none; color: #555;
+            border-bottom: 3px solid transparent; white-space: nowrap; }
+  nav a:hover { color: #2980b9; border-bottom-color: #2980b9; }
+  .container { max-width: 700px; margin: 0 auto; padding: 16px; }
+  .compare-section { background: #fff; border-radius: 12px; padding: 20px;
+                      margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .compare-section h2 { font-size: 16px; margin-bottom: 14px; color: #2c3e50; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #f8f9fa; padding: 8px 10px; text-align: left;
+        font-size: 12px; color: #888; }
+  td { padding: 10px; border-bottom: 1px solid #f0f0f0; }
+  .member-section { background: #fff; border-radius: 12px; margin-bottom: 16px;
+                     overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .member-header { display: flex; align-items: center; padding: 14px 16px; color: #fff; gap: 12px; }
+  .member-emoji { font-size: 28px; }
+  .member-info { flex: 1; }
+  .member-name { font-size: 18px; font-weight: 700; }
+  .member-role { font-size: 12px; opacity: 0.85; margin-top: 2px; }
+  .member-score-badge { background: rgba(255,255,255,0.25); border-radius: 12px;
+                          padding: 4px 12px; font-size: 13px; font-weight: 700; }
+  .member-body { padding: 16px; }
+  .tip-box { background: #f8f9fa; border-radius: 8px; padding: 12px;
+              font-size: 14px; color: #555; margin-bottom: 14px; }
+  .score-bar-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .score-bar-label { font-size: 12px; color: #888; white-space: nowrap; }
+  .score-bar-track { flex: 1; height: 8px; background: #ecf0f1; border-radius: 4px; overflow: hidden; }
+  .score-bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+  .score-bar-val { font-size: 12px; font-weight: 700; color: #555; white-space: nowrap; }
+  .dims-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+  .dim-box { border-radius: 8px; padding: 10px; }
+  .dim-label { font-size: 11px; color: #888; margin-bottom: 4px; }
+  .dim-text { font-size: 13px; color: #2c3e50; }
+  .lottery-box { border: 1px solid #e8e0ff; border-radius: 10px; padding: 14px;
+                  background: #fdfcff; margin-bottom: 14px; }
+  .lottery-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+  .lottery-recommend { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+  .lottery-row { margin-bottom: 8px; }
+  .lottery-label { font-size: 12px; color: #888; margin-bottom: 4px; }
+  .lottery-nums { display: flex; gap: 6px; flex-wrap: wrap; }
+  .num { display: inline-block; width: 32px; height: 32px; border-radius: 50%;
+          background: #3498db; color: #fff; font-weight: 700; font-size: 12px;
+          text-align: center; line-height: 32px; }
+  .power-ball { display: inline-block; width: 32px; height: 32px; border-radius: 50%;
+                 background: #e74c3c; color: #fff; font-weight: 700; font-size: 12px;
+                 text-align: center; line-height: 32px; }
+  .lottery-note { font-size: 11px; color: #aaa; margin-top: 8px; }
+  .lucky-row { display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+  .lucky-item { font-size: 13px; color: #555; }
+  .zodiac-box { background: #f8f8ff; border-radius: 8px; padding: 12px; }
+  .zodiac-header { display: flex; justify-content: space-between; font-size: 12px;
+                    color: #888; margin-bottom: 6px; }
+  .zodiac-hint { font-size: 13px; color: #555; }
+  .zodiac-meta { font-size: 12px; color: #aaa; margin-top: 4px; }
+  .zodiac-note { font-size: 12px; color: #e74c3c; margin-top: 6px; }
+  .weekly-section { background: #fff; border-radius: 12px; padding: 20px;
+                     margin-bottom: 16px; border-left: 5px solid #9b59b6;
+                     box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .weekly-section h2 { font-size: 16px; margin-bottom: 14px; }
+  .weekly-item { margin-bottom: 12px; font-size: 14px; }
+  .weekly-season { font-size: 12px; color: #888; margin-top: 2px; }
+  footer { text-align: center; padding: 24px; font-size: 12px; color: #aaa; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-emoji">🔮</div>
+  <div class="hero-title">賴家每日運勢 — 完整報告</div>
+  <div class="hero-date">2026-08-03 週一</div>
+  <div class="ganzhi-badge">今日干支：丙午年 · 庚午日</div>
+</div>
+
+<nav>
+  <a href="#compare">📊 總覽</a>
+  <a href="#aries">👨 賴關宇</a><a href="#amber">👩 孫婉柔</a><a href="#layton">👦 賴奕安</a><a href="#laura">👧 賴奕彤</a>
+</nav>
+
+<div class="container">
+
+  
+    <section class="weekly-section">
+      <h2>📅 本週運勢總覽</h2>
+      
+          <div class="weekly-item">
+            <b>👨 賴關宇</b>（♈白羊座）
+            <div>本週宜專注在長期目標，短期得失不必在意</div>
+            <div class="weekly-season">🍃 夏季火力全開，注意別過度消耗</div>
+          </div>
+          <div class="weekly-item">
+            <b>👩 孫婉柔</b>（♍處女座）
+            <div>本週宜專注在長期目標，短期得失不必在意</div>
+            <div class="weekly-season">🍃 夏季火力全開，注意別過度消耗</div>
+          </div>
+          <div class="weekly-item">
+            <b>👦 賴奕安</b>（♈白羊座）
+            <div>本週整體運勢平穩向上，關注火象方面</div>
+            <div class="weekly-season">🍃 夏季火力全開，注意別過度消耗</div>
+          </div>
+          <div class="weekly-item">
+            <b>👧 賴奕彤</b>（♎天秤座）
+            <div>本週整體運勢平穩向上，關注風象方面</div>
+            <div class="weekly-season">🍃 夏季火力全開，注意別過度消耗</div>
+          </div>
+    </section>
+
+  <section id="compare" class="compare-section">
+    <h2>📊 全家運勢比較</h2>
+    <table>
+      <tr><th>成員</th><th>評分</th><th>運勢</th><th>財運</th><th>彩券建議</th></tr>
+      
+        <tr>
+          <td>👨 賴關宇</td>
+          <td style="color:#3498db">★★★☆☆</td>
+          <td style="color:#3498db;font-weight:700">平順佳日</td>
+          <td>🟡</td>
+          <td>今日不宜</td>
+        </tr>
+        <tr>
+          <td>👩 孫婉柔</td>
+          <td style="color:#e67e22">★★☆☆☆</td>
+          <td style="color:#e67e22;font-weight:700">需謹慎</td>
+          <td>🟡</td>
+          <td>今日不宜</td>
+        </tr>
+        <tr>
+          <td>👦 賴奕安</td>
+          <td style="color:#27ae60">★★★★☆</td>
+          <td style="color:#27ae60;font-weight:700">小吉</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>👧 賴奕彤</td>
+          <td style="color:#3498db">★★★☆☆</td>
+          <td style="color:#3498db;font-weight:700">平順佳日</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+    </table>
+  </section>
+
+  
+    <section id="aries" class="member-section">
+      <div class="member-header" style="background:#3498db">
+        <span class="member-emoji">👨</span>
+        <div class="member-info">
+          <div class="member-name">賴關宇 Aries</div>
+          <div class="member-role">爸爸 ・ 日主癸 ・ ★★★☆☆</div>
+        </div>
+        <div class="member-score-badge">平順佳日</div>
+      </div>
+      <div class="member-body">
+        <div class="tip-box">💡 維持現狀，靜待時機</div>
+
+        <div class="score-bar-wrap">
+          <div class="score-bar-label">今日運勢強度</div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill" style="width:46%;background:#3498db"></div>
+          </div>
+          <div class="score-bar-val">-0.3</div>
+        </div>
+
+        <div class="dims-grid">
+        <div class="dim-box" style="background:#eaf4fb">
+          <div class="dim-label">💼 事業財運</div>
+          <div class="dim-text">工作平穩，按部就班即可</div>
+        </div>
+        <div class="dim-box" style="background:#e8f8f0">
+          <div class="dim-label">💪 健康狀態</div>
+          <div class="dim-text">適度休息，勿過度消耗體力</div>
+        </div>
+        <div class="dim-box" style="background:#fff8e7">
+          <div class="dim-label">🤝 人際關係</div>
+          <div class="dim-text">人際平穩，維持現有關係即可</div>
+        </div>
+        <div class="dim-box" style="background:#fef9e7">
+          <div class="dim-label">💰 財運狀態</div>
+          <div class="dim-text">🟡 財星現身 — 財星單現，有小財機緣，量力而為</div>
+        </div></div>
+
+        
+        <div class="lottery-box">
+          <div class="lottery-title">🎰 彩券分析</div>
+          <div class="lottery-recommend" style="color:#e74c3c">
+            🚫 今日不宜 — 財星未現或劫財當令，今日不建議投注
+          </div>
+          <div class="lottery-row">
+            <div class="lottery-label">🎱 大樂透幸運號碼</div>
+            <div class="lottery-nums"><span class='num'>06</span>  <span class='num'>09</span>  <span class='num'>13</span>  <span class='num'>18</span>  <span class='num'>29</span>  <span class='num'>31</span></div>
+          </div>
+          <div class="lottery-row">
+            <div class="lottery-label">⚡ 威力彩幸運號碼</div>
+            <div class="lottery-nums"><span class='num'>09</span>  <span class='num'>13</span>  <span class='num'>18</span>  <span class='num'>23</span>  <span class='num'>29</span>  <span class='num'>31</span> <span class="power-ball">04</span></div>
+          </div>
+          <div class="lottery-note">※ 號碼依八字喜用神五行推算，僅供娛樂參考</div>
+        </div>
+
+        <div class="lucky-row">
+          <div class="lucky-item">🎨 <b>幸運色彩</b> 白色/金色</div>
+          <div class="lucky-item">⏰ <b>幸運時辰</b> 亥時 21:00-23:00</div>
+        </div>
+
+        
+        <div class="zodiac-box">
+          <div class="zodiac-header">
+            <span>♈ 白羊座</span>
+            <span>今日主題：行動力強</span>
+          </div>
+          <div class="zodiac-hint">適合主動開口，把握溝通機會</div>
+          <div class="zodiac-meta">🌙 月相：新月</div>
+          <div class="zodiac-note">⚠️ 今日新月，情緒波動較大，多留意內心狀態</div>
+        </div>
+      </div>
+    </section>
+    <section id="amber" class="member-section">
+      <div class="member-header" style="background:#e67e22">
+        <span class="member-emoji">👩</span>
+        <div class="member-info">
+          <div class="member-name">孫婉柔 Amber</div>
+          <div class="member-role">媽媽 ・ 日主乙 ・ ★★☆☆☆</div>
+        </div>
+        <div class="member-score-badge">需謹慎</div>
+      </div>
+      <div class="member-body">
+        <div class="tip-box">💡 今日能量較低，避免重大決策</div>
+
+        <div class="score-bar-wrap">
+          <div class="score-bar-label">今日運勢強度</div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill" style="width:15%;background:#e67e22"></div>
+          </div>
+          <div class="score-bar-val">-2.8</div>
+        </div>
+
+        <div class="dims-grid">
+        <div class="dim-box" style="background:#eaf4fb">
+          <div class="dim-label">💼 事業財運</div>
+          <div class="dim-text">工作上易有小摩擦，保持低調</div>
+        </div>
+        <div class="dim-box" style="background:#e8f8f0">
+          <div class="dim-label">💪 健康狀態</div>
+          <div class="dim-text">注意腸胃或情緒起伏，多補水</div>
+        </div>
+        <div class="dim-box" style="background:#fff8e7">
+          <div class="dim-label">🤝 人際關係</div>
+          <div class="dim-text">避免與人發生口角，多傾聽少表態</div>
+        </div>
+        <div class="dim-box" style="background:#fef9e7">
+          <div class="dim-label">💰 財運狀態</div>
+          <div class="dim-text">🟡 財星現身 — 財星單現，有小財機緣，量力而為</div>
+        </div></div>
+
+        
+        <div class="lottery-box">
+          <div class="lottery-title">🎰 彩券分析</div>
+          <div class="lottery-recommend" style="color:#e74c3c">
+            🚫 今日不宜 — 財星未現或劫財當令，今日不建議投注
+          </div>
+          <div class="lottery-row">
+            <div class="lottery-label">🎱 大樂透幸運號碼</div>
+            <div class="lottery-nums"><span class='num'>06</span>  <span class='num'>08</span>  <span class='num'>18</span>  <span class='num'>26</span>  <span class='num'>31</span>  <span class='num'>33</span></div>
+          </div>
+          <div class="lottery-row">
+            <div class="lottery-label">⚡ 威力彩幸運號碼</div>
+            <div class="lottery-nums"><span class='num'>01</span>  <span class='num'>03</span>  <span class='num'>07</span>  <span class='num'>18</span>  <span class='num'>28</span>  <span class='num'>33</span> <span class="power-ball">02</span></div>
+          </div>
+          <div class="lottery-note">※ 號碼依八字喜用神五行推算，僅供娛樂參考</div>
+        </div>
+
+        <div class="lucky-row">
+          <div class="lucky-item">🎨 <b>幸運色彩</b> 黑色/深藍</div>
+          <div class="lucky-item">⏰ <b>幸運時辰</b> 卯時 05:00-07:00</div>
+        </div>
+
+        
+        <div class="zodiac-box">
+          <div class="zodiac-header">
+            <span>♍ 處女座</span>
+            <span>今日主題：行動力強</span>
+          </div>
+          <div class="zodiac-hint">你的細心讓人信任，適合承擔重要任務</div>
+          <div class="zodiac-meta">🌙 月相：新月</div>
+          <div class="zodiac-note">⚠️ 過度完美主義、焦慮，今日特別留意；今日新月，情緒波動較大，多留意內心狀態</div>
+        </div>
+      </div>
+    </section>
+    <section id="layton" class="member-section">
+      <div class="member-header" style="background:#27ae60">
+        <span class="member-emoji">👦</span>
+        <div class="member-info">
+          <div class="member-name">賴奕安 Layton</div>
+          <div class="member-role">哥哥 ・ 日主戊 ・ ★★★★☆</div>
+        </div>
+        <div class="member-score-badge">小吉</div>
+      </div>
+      <div class="member-body">
+        <div class="tip-box">💡 心情平穩，可做中長期規劃</div>
+
+        <div class="score-bar-wrap">
+          <div class="score-bar-label">今日運勢強度</div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill" style="width:68%;background:#27ae60"></div>
+          </div>
+          <div class="score-bar-val">+1.5</div>
+        </div>
+
+        <div class="dims-grid">
+        <div class="dim-box" style="background:#eaf4fb">
+          <div class="dim-label">📚 學業課業</div>
+          <div class="dim-text">專注力不錯，適合複習重點或練習題目</div>
+        </div>
+        <div class="dim-box" style="background:#e8f8f0">
+          <div class="dim-label">💪 健康狀態</div>
+          <div class="dim-text">身體狀況良好，保持規律作息</div>
+        </div>
+        <div class="dim-box" style="background:#fff8e7">
+          <div class="dim-label">🤝 人際關係</div>
+          <div class="dim-text">與同學相處融洽，合作活動表現佳</div>
+        </div>
+        <div class="dim-box" style="background:#f5eaf8">
+          <div class="dim-label">🌈 生活狀態</div>
+          <div class="dim-text">心情愉快，今天有小驚喜等著你</div>
+        </div></div>
+
+        
+
+        <div class="lucky-row">
+          <div class="lucky-item">🎨 <b>幸運色彩</b> 紅色/橙色</div>
+          <div class="lucky-item">⏰ <b>幸運時辰</b> 辰時 07:00-09:00</div>
+        </div>
+
+        
+        <div class="zodiac-box">
+          <div class="zodiac-header">
+            <span>♈ 白羊座</span>
+            <span>今日主題：行動力強</span>
+          </div>
+          <div class="zodiac-hint">今日火星能量助你推進計畫，但注意別太強勢</div>
+          <div class="zodiac-meta">🌙 月相：新月</div>
+          <div class="zodiac-note">⚠️ 今日新月，情緒波動較大，多留意內心狀態</div>
+        </div>
+      </div>
+    </section>
+    <section id="laura" class="member-section">
+      <div class="member-header" style="background:#3498db">
+        <span class="member-emoji">👧</span>
+        <div class="member-info">
+          <div class="member-name">賴奕彤 Laura</div>
+          <div class="member-role">妹妹 ・ 日主辛 ・ ★★★☆☆</div>
+        </div>
+        <div class="member-score-badge">平順佳日</div>
+      </div>
+      <div class="member-body">
+        <div class="tip-box">💡 平穩過渡日，宜守成不宜躁進</div>
+
+        <div class="score-bar-wrap">
+          <div class="score-bar-label">今日運勢強度</div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill" style="width:58%;background:#3498db"></div>
+          </div>
+          <div class="score-bar-val">+0.7</div>
+        </div>
+
+        <div class="dims-grid">
+        <div class="dim-box" style="background:#eaf4fb">
+          <div class="dim-label">📚 學業課業</div>
+          <div class="dim-text">學習狀態平穩，按計畫進行即可</div>
+        </div>
+        <div class="dim-box" style="background:#e8f8f0">
+          <div class="dim-label">💪 健康狀態</div>
+          <div class="dim-text">適度休息，勿過度消耗體力</div>
+        </div>
+        <div class="dim-box" style="background:#fff8e7">
+          <div class="dim-label">🤝 人際關係</div>
+          <div class="dim-text">人際關係平穩，跟好朋友玩就好</div>
+        </div>
+        <div class="dim-box" style="background:#f5eaf8">
+          <div class="dim-label">🌈 生活狀態</div>
+          <div class="dim-text">今天平平穩穩，開心過日子就好</div>
+        </div></div>
+
+        
+
+        <div class="lucky-row">
+          <div class="lucky-item">🎨 <b>幸運色彩</b> 紅色/橙色</div>
+          <div class="lucky-item">⏰ <b>幸運時辰</b> 酉時 17:00-19:00</div>
+        </div>
+
+        
+        <div class="zodiac-box">
+          <div class="zodiac-header">
+            <span>♎ 天秤座</span>
+            <span>今日主題：行動力強</span>
+          </div>
+          <div class="zodiac-hint">金星能量讓你今日魅力十足，適合社交場合</div>
+          <div class="zodiac-meta">🌙 月相：新月</div>
+          <div class="zodiac-note">⚠️ 今日新月，情緒波動較大，多留意內心狀態</div>
+        </div>
+      </div>
+    </section>
+
+  <footer>
+    ⚡ Nova小精靈 · 賴家每日運勢自動生成<br>
+    八字喜忌 × 星座分析 × 財運指標<br>
+    <small>彩券號碼依五行推算，僅供娛樂，請量力而為</small>
+  </footer>
+
+</div>
+</body>
+</html>
